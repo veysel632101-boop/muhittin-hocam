@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111936">
+<title>Muhittin Hocam | Öğretmenler Gününüz Kutlu Olsun</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ min-height:100vh;background:radial-gradient(ellipse at top,#27356c,#090d20 80%);
+ color:#fff;font-family:"Segoe UI",Arial,sans-serif;text-align:center;
+ overflow-x:hidden;padding:25px 15px
+}
+#particles{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.particle{position:absolute;bottom:-50px;animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.math{position:fixed;color:#ffffff17;font-size:35px;animation:mathFloat 8s infinite ease-in-out;pointer-events:none}
+@keyframes mathFloat{50%{transform:translateY(-50px) rotate(25deg);color:#ffffff45}}
+.card{
+ position:relative;z-index:2;max-width:720px;margin:25px auto;padding:40px 25px;
+ border-radius:30px;background:#ffffff0d;border:1px solid #ffffff35;
+ backdrop-filter:blur(18px);box-shadow:0 0 60px #819aff30;
+ animation:entrance 1.5s ease
+}
+@keyframes entrance{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
+.top{color:#ffd978;letter-spacing:4px;font-size:13px;font-weight:bold;margin-bottom:25px}
+.photo-container{
+ width:205px;height:205px;margin:25px auto;position:relative;
+ display:flex;align-items:center;justify-content:center
+}
+.photo-container:before{
+ content:"";position:absolute;inset:-9px;border-radius:50%;
+ background:conic-gradient(#ffd978,#ff8fc7,#819aff,#fff,#ffd978);
+ animation:rotate 5s linear infinite;box-shadow:0 0 35px #ffd97870
+}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.photo-container img{
+ position:relative;width:195px;height:195px;object-fit:cover;object-position:center 25%;
+ border-radius:50%;border:5px solid #171d3e;z-index:2;animation:photoAppear 1.5s ease
+}
+@keyframes photoAppear{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+.photo-caption{color:#ffd978;font-size:14px;letter-spacing:2px;margin-top:15px}
+.heart{font-size:48px;margin:20px;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.2)}30%{transform:scale(1)}45%{transform:scale(1.15)}}
+h1{font-size:clamp(32px,7vw,53px);background:linear-gradient(90deg,#fff,#ffd978,#ff9ecb);background-clip:text;-webkit-background-clip:text;color:transparent;animation:glow 3s infinite alternate}
+@keyframes glow{to{filter:drop-shadow(0 0 18px #ffd978)}}
+.teacher{font-size:clamp(21px,5vw,32px);color:#91b9ff;margin:20px 0;font-weight:bold}
+.divider{width:130px;height:2px;margin:28px auto;background:linear-gradient(90deg,transparent,#ffd978,transparent);box-shadow:0 0 15px #ffd978}
+p{color:#e1e7ff;font-size:16px;line-height:2;margin-bottom:18px}
+button{
+ margin-top:25px;padding:16px 30px;border:1px solid #ffffff60;border-radius:50px;
+ background:linear-gradient(90deg,#648aff,#a36dff);color:white;font-size:16px;
+ font-weight:bold;cursor:pointer;box-shadow:0 0 25px #819aff70;transition:.3s
+}
+button:hover{transform:scale(1.08);box-shadow:0 0 40px #a36dff}
+.message{display:none;margin-top:30px}
+.message.show{display:block;animation:messageOpen 1.5s ease}
+@keyframes messageOpen{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.message h2{color:#ffd978;margin:20px 0;line-height:1.6}
+.footer{margin-top:35px;color:#aebbe5;font-size:13px}
+.confetti{position:fixed;z-index:20;top:-20px;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:0}}
+@media(max-width:500px){
+ .card{padding:30px 18px}
+ .photo-container{width:175px;height:175px}
+ .photo-container img{width:165px;height:165px}
+ p{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div id="particles" aria-hidden="true"></div>
+<div class="math" style="top:12%;left:7%" aria-hidden="true">π</div>
+<div class="math" style="top:35%;right:8%" aria-hidden="true">∞</div>
+<div class="math" style="top:75%;left:10%" aria-hidden="true">√</div>
+<div class="math" style="top:85%;right:12%" aria-hidden="true">∑</div>
+<div class="math" style="top:55%;left:3%" aria-hidden="true">x²</div>
+
+<main class="card">
+ <div class="top">24 KASIM • ÖĞRETMENLER GÜNÜ</div>
+ <div class="photo-container">
+  <!-- Fotoğrafı bu HTML dosyasıyla aynı klasöre hocam.png adıyla koyun. -->
+  <img src="hocam.png" alt="Muhittin Deve Bakan Hocamızın fotoğrafı">
+ </div>
+ <div class="photo-caption">DEĞERLİ ÖĞRETMENİMİZ</div>
+ <div class="heart" aria-hidden="true">❤️</div>
+ <h1>İyi ki Varsınız!</h1>
+ <div class="teacher">Muhittin Deve Bakan Hocam</div>
+ <div class="divider"></div>
+ <p>Bazı insanlar vardır, hayatımıza yalnızca bilgi katmaz; kalbimizde de unutulmayacak izler bırakırlar. Siz de bizim için o insanlardan birisiniz.</p>
+ <button onclick="openMessage()" id="surpriseBtn">🎁 Size Küçük Bir Sürprizimiz Var</button>
+
+ <section class="message" id="message">
+  <div class="divider"></div>
+  <h2>Sevgili Muhittin Hocam...</h2>
+  <p>Bazen bir öğretmenin hayatımıza kattıklarını anlatmaya kelimeler yetmez. Çünkü öğretmenlik sadece bir konuyu anlatmak, tahtaya formüller yazmak ya da bize sorular çözdürmek değildir. Öğretmenlik; bir insanın hayatına dokunmak, ona yol göstermek, umut olmak ve geleceğine ışık tutmaktır.</p>
+  <p>Muhittin Hocam, belki her dersinizde farkında değiliz ama bize yalnızca matematiği öğretmiyorsunuz. Sabretmeyi, pes etmemeyi, yanlışlarımızdan ders çıkarmayı ve zor görünen şeylerin bile emek verince başarılabileceğini öğretiyorsunuz.</p>
+  <p>Bazen anlamadığımız bir soruyu tekrar tekrar anlatmanız, bazen bizi cesaretlendirmeniz, bazen de küçücük bir başarımızla mutlu olmanız bizim için çok kıymetli. Belki sizin için sıradan bir okul günü olan bazı anlar, bizim hafızamızda güzel bir hatıra olarak kalacak.</p>
+  <p>Yıllar geçecek, sınıflar değişecek, konular unutulacak. Belki bugün çözdüğümüz bazı matematik sorularını bile hatırlamayacağız. Ama bize kattığınız değerleri, gösterdiğiniz emeği ve üzerimizde bıraktığınız güzel izleri asla unutmayacağız.</p>
+  <p>İyi ki yollarımız sizinle kesişmiş. İyi ki bizim öğretmenimiz olmuşsunuz. Bize ayırdığınız zaman, gösterdiğiniz sabır ve verdiğiniz bütün emekler için size yürekten teşekkür ederiz.</p>
+  <p>Unutmayın hocam, bir öğretmenin gerçek başarısı yalnızca yetiştirdiği öğrencilerde değil, onların kalplerinde bıraktığı güzel izlerdedir.</p>
+  <div class="divider"></div>
+  <h2>İyi ki Varsınız Muhittin Hocam!</h2>
+  <h2 style="color:#ffb9df">Öğretmenler Gününüz Kutlu Olsun! 🌹</h2>
+  <p>Emekleriniz hiçbir zaman unutulmayacak. ❤️</p>
+  <div style="font-size:40px;margin:25px" aria-hidden="true">🌹 ❤️ 🌹</div>
+ </section>
+
+ <div class="footer">∞ Bir öğretmenin etkisi sonsuzdur ∞<br><br>Sevgi ve saygılarımızla...</div>
+</main>
+
+<script>
+const particles=document.getElementById("particles");
+const symbols=["❤️","✨","🌹","💫","⭐","💖"];
+for(let i=0;i<35;i++){
+ const el=document.createElement("div");
+ el.className="particle";
+ el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+ el.style.left=Math.random()*100+"%";
+ el.style.fontSize=(12+Math.random()*20)+"px";
+ el.style.animationDuration=(7+Math.random()*12)+"s";
+ el.style.animationDelay=Math.random()*10+"s";
+ particles.appendChild(el);
+}
+let opened=false;
+function openMessage(){
+ if(opened)return;
+ opened=true;
+ document.getElementById("message").classList.add("show");
+ document.getElementById("surpriseBtn").textContent="❤️ İyi ki Varsınız Hocam!";
+ const colors=["#ffd978","#ff9ecb","#91b9ff","#ffffff","#a36dff"];
+ for(let i=0;i<150;i++){
+  const el=document.createElement("div");
+  el.className="confetti";
+  el.style.left=Math.random()*100+"vw";
+  el.style.background=colors[Math.floor(Math.random()*colors.length)];
+  el.style.width=(5+Math.random()*8)+"px";
+  el.style.height=(8+Math.random()*12)+"px";
+  el.style.borderRadius="3px";
+  el.style.animationDuration=(2+Math.random()*4)+"s";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),6500);
+ }
+ setTimeout(()=>{
+  document.getElementById("message").scrollIntoView({behavior:"smooth",block:"start"});
+ },300);
+}
+</script>
+</body>
+</html>
